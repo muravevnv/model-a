@@ -1,0 +1,47 @@
+@use 'sass:math';
+@use 'sass:meta';
+
+// Rem
+@function rem($px, $current: 16) {
+  $result: math.div($px, $current) + rem;
+  @return $result;
+}
+
+//media query desktop-to-mob
+@mixin mq($canvas, $canvas2: null) {
+  @if $canvas {
+    @media only screen and (max-width: $canvas) {
+      @content;
+    }
+  }
+}
+
+//media query mob-to-desktop
+@mixin mq-min($canvas, $canvas2: null) {
+  @if $canvas {
+    @media only screen and (min-width: $canvas) {
+      @content;
+    }
+  }
+}
+
+// media hover
+@mixin mq-hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{{siteName}} — Главная</title>
+
+	<link rel="stylesheet" href="/src/scss/style.scss" />
+</head>
+
+<body>
+
+	{{> header }}
+
+	<main class="page">
+		<section class="hero">
+			<div class="hero__overlay js-hero-overlay"></div>
+			<div class="hero__video">
+				<video class="js-hero-video" autoplay playsinline muted>
+					<source src="images/hero/hero-sm.mp4" media="(max-width: 559.98px)">
+					<source src="images/hero/hero.mp4">
+				</video>
+			</div>
+
+			<!-- <picture class="hero__img">
+				<img src="images/hero/hero-poster.webp" alt="">
+			</picture> -->
+			<div class="hero__inner">
+				<div class="hero__head">
+					<div class="hero__head-title js-hero-title">Model A</div>
+					<div class="hero__head-subtitle js-hero-subtitle">
+						Рожден для AIRTOUCH. Создан для вас.
+					</div>
+				</div>
+				<div class="hero__bottom">
+					<a href="#" class="hero__btn btn btn--white btn--xl">Заказать</a>
+					<div class="hero__price">от 25 000 ₽</div>
+				</div>
+			</div>
+		</section>
+		<section class="instrument section section-black">
+			<div class="container">
+				<div class="instrument__inner">
+					<h2 class="instrument__title h2" data-animation="title">
+						Первый профессиональный инструмент, разработанный
+						для метода AIRTOUCH
+					</h2>
+					<div class="instrument__desc" data-animation="fade-up" data-delay="0.5" data-distance="60">
+						Оригинальное устройство от автора метода AIRTOUCH Владимира Сарбашева и команды инженеров REMEZ.
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="history section js-history">
+			<video src="images/history/history.mp4" autoplay playsinline muted loop class="history__video"></video>
+			<div class="history__inner js-history-info">
+				<div class="history__title h2">
+					Философия Model A. Почему мы его создали
+				</div>
+				<div class="history__subtitle">
+					Метод AirTouch — это контролируемое разделение слоев с помощью потока воздуха
+				</div>
+				<div class="history__desc">
+					<p>
+						До настоящего времени глобальные участники рынка создавали устройства для сушки волос
+					</p>
+					<p>
+						Мы разработали инструмент для управления слоями волос, где энергия потока, автономность и
+						распределение веса работают на одну цель
+					</p>
+					<p>
+						совершенно чистое разделение
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="benefits section section-black">
+			<div class="container">
+				<div class="benefits__head">
+					<div class="benefits__title h2" data-animation="title">
+						Сложное окрашивание перестает быть сложным
+					</div>
+					<div class="benefits__desc" data-animation="fade-up" data-delay="0.5" data-distance="60">
+						Каждый элемент направлен повышать мастерство и скорость процесса.
+					</div>
+				</div>
+				<div class="benefits__main">
+					<div class="benefits__slider js-benefits-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide benefits__item">
+								<video class="benefits__item-video" data-scroll-video src="images/benefits/benefit-01.mp4" playsinline muted loop></video>
+								<div class="benefits__item-info">
+									<div class="benefits__item-title h4">Моментально чистое разделение</div>
+									<div class="benefits__item-desc">
+										Математически расчитанный поток воздуха создает необходимый импульс и мощный
+										равномерный поток для безупречного разделения с первого раза.
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide benefits__item">
+								<picture class="benefits__item-img">
+									<img src="images/benefits/benefit-02.webp" alt="Моментально чистое разделение">
+								</picture>
+								<div class="benefits__item-info">
+									<div class="benefits__item-title h4">Моментально чистое разделение</div>
+									<div class="benefits__item-desc">
+										Математически расчитанный поток воздуха создает необходимый импульс и мощный
+										равномерный поток для безупречного разделения с первого раза.
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide benefits__item">
+								<video class="benefits__item-video" src="images/benefits/benefit-02.mp4" playsinline muted loop></video>
+								<div class="benefits__item-info">
+									<div class="benefits__item-title h4">Моментально чистое разделение</div>
+									<div class="benefits__item-desc">
+										Математически расчитанный поток воздуха создает необходимый импульс и мощный
+										равномерный поток для безупречного разделения с первого раза.
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide benefits__item">
+								<picture class="benefits__item-img">
+									<img src="images/benefits/benefit-01.webp" alt="Моментально чистое разделение">
+								</picture>
+								<div class="benefits__item-info">
+									<div class="benefits__item-title h4">Моментально чистое разделение</div>
+									<div class="benefits__item-desc">
+										Математически расчитанный поток воздуха создает необходимый импульс и мощный
+										равномерный поток для безупречного разделения с первого раза.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="benefits__bottom">
+					<button type="button" class="slider-nav-btn reset-btn js-benefits-slider-prev">
+						<svg class="icon-svg icon-svg--32" aria-hidden="true">
+							<use xlink:href="./images/sprite.svg#chevron-left"></use>
+						</svg>
+					</button>
+					<button type="button" class="slider-nav-btn reset-btn js-benefits-slider-next">
+						<svg class="icon-svg icon-svg--32" aria-hidden="true">
+							<use xlink:href="./images/sprite.svg#chevron-right"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</section>
+		<section class="device section section-black">
+			<div class="container">
+				<div class="device__head">
+					<div class="device__subtitle" data-animation="fade-up" data-delay="0" data-distance="60">Абсолютный эталон от инженеров REMEZ</div>
+					<div class="device__title" data-animation="title">
+						Выдающиеся параметры, объединенные в&nbsp;компактный корпус
+					</div>
+				</div>
+				<div class="device__frame sequence">
+					<canvas id="canvas"></canvas>
+				</div>
+
+				<div class="device__features js-features-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide device__feature">
+							<div class="device__feature-label">
+								<span>Вес</span>
+							</div>
+							<div class="device__feature-desc">
+								280 грамм
+							</div>
+						</div>
+						<div class="swiper-slide device__feature">
+							<div class="device__feature-label">
+								<span>габариты</span>
+							</div>
+							<div class="device__feature-desc">
+								220×120×56 мм
+							</div>
+						</div>
+						<div class="swiper-slide device__feature">
+							<div class="device__feature-label">
+								<span>автономность</span>
+							</div>
+							<div class="device__feature-desc">
+								12 минут
+								<br>
+								8-12 зон окрашивания
+							</div>
+						</div>
+						<div class="swiper-slide device__feature">
+							<div class="device__feature-label">
+								<span>поток</span>
+							</div>
+							<div class="device__feature-desc">
+								43 л/сек
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="calc section js-calc">
+			<div class="calc__head">
+				<div class="calc__title h2" data-animation="title">
+					Точные расчеты аэродинамики и газодинамики
+				</div>
+				<div class="calc__desc" data-animation="fade-up" data-delay="0.5" data-distance="60">
+					Не только большая мощность. Импульс, рассчитанный равномерный поток без завихрений и потерь.
+					Вычисления и результат, доступный только лучшим командам аэродинамики.
+				</div>
+			</div>
+			<picture class="calc__img js-calc-video">
+				<img src="images/calc/calc.webp" alt="">
+			</picture>
+		</section>
+		<section class="int-property section">
+			<div class="container">
+				<div class="int-property__title h2" data-animation="title">
+					Интеллектуальная собственность инженеров REMEZ
+				</div>
+				<div class="int-property__slider js-int-property-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide int-property__item int-property__item--xl">
+							<div class="int-property__item-main">
+								<video class="int-property__item-video" src="images/int-property/aerodynamic.mp4" playsinline muted loop data-scroll-video></video>
+								<div class="int-property__item-label">
+									запатентовано №...
+								</div>
+							</div>
+							<div class="int-property__item-head">
+								<div class="int-property__item-title">
+									Воздушный тракт EtaCore94
+								</div>
+								<div class="int-property__item-subtitle">
+									Аэродинамический КПД 0,94
+								</div>
+							</div>
+							<div class="int-property__item-desc">
+								Тракт EtaCore94 создает ламинарный поток без вибраций и завихрений воздуха, присущих
+								всем дующим устройствам. Вы получаете чистый выдув для безупречного результата.
+							</div>
+						</div>
+						<div class="swiper-slide int-property__item">
+							<div class="int-property__item-main">
+								<picture class="int-property__item-img">
+									<img src="images/int-property/int-property-02.webp" alt="">
+								</picture>
+							</div>
+							<div class="int-property__item-head">
+								<div class="int-property__item-title">
+									Мгновенный импульс
+								</div>
+							</div>
+							<div class="int-property__item-desc">
+								При включении Model A генерирует импульс с высокой кинетической энергией, обеспечивая
+								мгновенное и полное отделение коротких волосков.
+							</div>
+						</div>
+						<div class="swiper-slide int-property__item">
+							<div class="int-property__item-main">
+								<picture class="int-property__item-img">
+									<img src="images/int-property/int-property-03.webp" alt="">
+								</picture>
+							</div>
+							<div class="int-property__item-head">
+								<div class="int-property__item-title">
+									Ламинарный поток
+								</div>
+							</div>
+							<div class="int-property__item-desc">
+								Поток движется параллельными слоями без завихрений, не спутывая волосы. Вихри, которые
+								заставляют короткие и длинные волоски смешиваться, отсутствуют — сепарация остаётся
+								чистой, а граница идеально ровной.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="int-property__bottom">
+					<button type="button"
+						class="slider-nav-btn slider-nav-btn--light reset-btn js-int-property-slider-prev">
+						<svg class="icon-svg icon-svg--32" aria-hidden="true">
+							<use xlink:href="./images/sprite.svg#chevron-left"></use>
+						</svg>
+					</button>
+					<button type="button"
+						class="slider-nav-btn slider-nav-btn--light reset-btn js-int-property-slider-next">
+						<svg class="icon-svg icon-svg--32" aria-hidden="true">
+							<use xlink:href="./images/sprite.svg#chevron-right"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</section>
+		<section class="nozzle section">
+			<div class="nozzle__inner">
+				<div class="nozzle__head">
+					<div class="container">
+						<div class="nozzle__subtitle" data-animation="title">Прецизионное</div>
+						<div class="nozzle__title" data-animation="title">
+							Сопло <br> AeroMIG A
+						</div>
+					</div>
+				</div>
+				<video src="images/nozzle/nozzle.mp4" playsinline autoplay muted class="nozzle__video"></video>
+				<div class="nozzle__bottom">
+					<div class="container">
+						<div class="nozzle__desc">
+							Создает правильное распределение потока — одинаковое качество выдува по всей ширине пряди.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="nozzle-model section">
+			<div class="container">
+				<div class="nozzle-model__inner" data-animation="fade-up" data-delay="0" data-distance="60"
+					data-duration="0.8">
+					<div class="nozzle-model__info">
+						<div class="nozzle-model__desc">
+							Сопло Model A спроектировано инженерами REMEZ на основе вычислительной газодинамики, с
+							контролем присоединённых отрывов и коэффициентом скорости 0,94.
+						</div>
+						<div class="nozzle-model__title h3">
+							Каждый миллиметр работает на результат
+						</div>
+					</div>
+					<div class="nozzle-model__3d">
+						<div class="nozzle-model__3d-frame" id="scene-wrap">
+							<div id="canvas-holder"></div>
+						</div>
+						<div class="nozzle-model__3d-tip">
+							<img src="images/360.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="aestetic section">
+			<div class="container">
+				<div class="aestetic__head">
+					<div class="aestetic__title h2" data-animation="title">
+						Эстетика чистого выдува
+					</div>
+					<div class="aestetic__desc" data-animation="fade-up" data-delay="0.5" data-distance="60">
+						Плавный нечитаемый переход и отсутствие границы и рваных краев. Это эстетика AirTouch, которая
+						возможна с Model A.
+					</div>
+				</div>
+				<div class="aestetic__items" data-animation="fade-up" data-delay="0.7" data-distance="60"
+					data-duration="0.8">
+					<picture class="aestetic__item">
+						<img src="images/aestetic/img-01.webp" alt="">
+					</picture>
+					<picture class="aestetic__item">
+						<img src="images/aestetic/img-02.webp" alt="">
+					</picture>
+				</div>
+			</div>
+		</section>
+		<section class="bnr section section-black">
+			<div class="bnr__info">
+				<div class="container">
+					<div class="bnr__head">
+						<div class="bnr__title" data-animation="title">Режим подсказок StudyMode</div>
+						<div class="bnr__desc" data-animation="fade-up" data-delay="0.4" data-distance="60">
+							Световая индикация для определения длительности выдува: 4 секунды для стандартного объёма,
+							дополнительные 4 секунды для сложных или пористых волос.
+						</div>
+					</div>
+				</div>
+			</div>
+			<picture class="bnr__video">
+				<img src="images/preview.webp" alt="">
+			</picture>
+		</section>
+		<section class="bnr bnr--to-right section section-black">
+			<div class="bnr__info">
+				<div class="container">
+					<div class="bnr__head">
+						<div class="bnr__title" data-animation="title">Ориентированная прочность</div>
+						<div class="bnr__desc" data-animation="fade-up" data-delay="0.4" data-distance="60">
+							Ударопрочный композитный корпус выдерживает падение, насадка отстегивается — результаты
+							краш-теста при падении с высоты рабочего стола. Вы возвращаете насадку на место одним
+							движением, процесс окрашивания продолжается.
+						</div>
+					</div>
+				</div>
+			</div>
+			<picture class="bnr__video">
+				<img src="images/preview.webp" alt="">
+			</picture>
+		</section>
+		<section class="autonomy section section-black">
+			<div class="container">
+				<div class="autonomy__head" data-animation="title">
+					Надежная <br> автономность
+				</div>
+
+				<div class="autonomy__section">
+					<div class="autonomy__top" data-animation="fade-up" data-delay="0" data-distance="60">
+						<div class="autonomy__title h2">
+							Аккумуляторы PowerTwin&nbsp;A
+						</div>
+						<div class="autonomy__subtitle">
+							с BMS системой
+						</div>
+					</div>
+					<div class="autonomy__main" data-animation="fade-up" data-delay="0.15" data-distance="60"
+						data-duration="0.8">
+						<div class="autonomy__details">
+							<div class="autonomy__detail">
+								<div class="autonomy__detail-label">
+									Горячая замена
+								</div>
+								<div class="autonomy__detail-desc">
+									за 3 секунды
+								</div>
+							</div>
+							<div class="autonomy__detail">
+								<div class="autonomy__detail-label">
+									500 полных циклов
+								</div>
+								<div class="autonomy__detail-desc">
+									до 2-х лет
+									<span>ресурс регулярного использования</span>
+								</div>
+							</div>
+							<div class="autonomy__detail">
+								<div class="autonomy__detail-label">2 аккумулятора</div>
+								<div class="autonomy__detail-desc">
+									12 минут
+									<span>без просадки мощности</span>
+								</div>
+								<div class="autonomy__detail-desc">
+									8-12 зон
+									<span>окрашивания</span>
+								</div>
+							</div>
+						</div>
+						<picture class="autonomy__video">
+							<img src="images/autonomy/video.webp" alt="">
+						</picture>
+					</div>
+				</div>
+				<div class="autonomy__section">
+					<div class="autonomy__top" data-animation="fade-up" data-delay="0" data-distance="60">
+						<div class="autonomy__title h2">BLDC мотор</div>
+						<div class="autonomy__subtitle">с цифровым управлением</div>
+					</div>
+					<div class="autonomy__benefits" data-animation="fade-up" data-delay="0.15" data-distance="60"
+						data-duration="0.8">
+						<div class="autonomy__benefit">
+							<div class="autonomy__benefit-label">Система контроля токов и напряжения</div>
+							<div class="autonomy__benefit-icon">
+								<img src="images/autonomy/vawe.svg" alt="">
+							</div>
+						</div>
+						<div class="autonomy__benefit">
+							<div class="autonomy__benefit-label">Защита от перегрузки</div>
+							<div class="autonomy__benefit-icon">
+								<img src="images/autonomy/shield.svg" alt="">
+							</div>
+						</div>
+						<div class="autonomy__benefit autonomy__benefit--main">
+							<div class="autonomy__benefit-value">115 000</div>
+							<div class="autonomy__benefit-desc">об/мин</div>
+						</div>
+						<div class="autonomy__benefit">
+							<div class="autonomy__benefit-label">
+								Стабильная мощность независимо от уровня заряда аккумулятора
+							</div>
+							<div class="autonomy__benefit-icon">
+								<img src="images/autonomy/charge.svg" alt="">
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<video src="/images/autonomy/motor.mp4" playsinline autoplay loop muted class="autonomy__motor">
+			</video>
+		</section>
+		<section class="passport section">
+			<div class="container">
+				<div class="passport__inner">
+					<div class="passport__head" data-animation="fade-up" data-delay="0" data-distance="60"
+						data-duration="0.8">
+						<div class="passport__title h2">
+							Технический паспорт
+						</div>
+						<a href="#" class="passport__link">Смотреть</a>
+					</div>
+					<picture class="passport__img" data-animation="fade-up" data-delay="0.2" data-distance="60"
+						data-duration="0.8">
+						<img src="images/passport/tech.webp" alt="">
+					</picture>
+				</div>
+			</div>
+		</section>
+		<section class="complect section">
+			<div class="container">
+				<div class="complect__head" data-animation="fade-up" data-delay="0" data-distance="60"
+					data-duration="0.8">
+					<div class="complect__label">Скоро</div>
+					<div class="complect__title h3">
+						Станция для зарядки и хранения аккумуляторов
+					</div>
+				</div>
+				<div class="complect__gallery" data-animation="fade-up" data-delay="0.2" data-distance="60"
+					data-duration="0.8">
+					<picture class="complect__img">
+						<img src="images/complect/img-01.webp" alt="">
+					</picture>
+					<picture class="complect__img">
+						<img src="images/complect/img-02.webp" alt="">
+					</picture>
+					<picture class="complect__img">
+						<img src="images/complect/img-03.webp" alt="">
+					</picture>
+				</div>
+			</div>
+		</section>
+		<section class="account section">
+			<div class="container">
+				<div class="account__inner" data-animation="fade-up" data-delay="0.2" data-distance="60"
+					data-duration="0.8">
+					<div class="account__info">
+						<div class="account__title">
+							Создайте аккаунт на платформе Model A
+						</div>
+						<div class="account__desc">
+							Мы будем сообщать об обновлениях и событиях.
+						</div>
+						<a href="#" class="account__btn btn btn--primary btn--xl">
+							Создать
+							<svg class="icon-svg icon-svg--20" aria-hidden="true">
+								<use xlink:href="./images/sprite.svg#arrow-right"></use>
+							</svg>
+						</a>
+					</div>
+					<picture class="account__img">
+						<img src="images/bell.webp" alt="">
+					</picture>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	{{> footer }}
+
+	<script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

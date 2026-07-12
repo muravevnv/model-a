@@ -1,0 +1,144 @@
+@use "../base/imports" as *;
+
+.device {
+  padding: 160px 0 180px;
+  overflow: hidden;
+
+  @include mq($l) {
+    padding: 40px 0 84px;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto 72px;
+
+    @include mq($l) {
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 32px;
+    line-height: 1.32;
+    font-weight: 500;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-image: linear-gradient(
+      90deg,
+      #7e553d 0%,
+      #ffd4b8 50%,
+      #7e553d 100%
+    );
+    text-align: center;
+
+    @include mq($l) {
+      font-size: 20px;
+      line-height: 1.3;
+    }
+  }
+
+  &__title {
+    font-size: 60px;
+    line-height: 1.1;
+    font-weight: 500;
+    text-align: center;
+
+    @include mq($l) {
+      font-size: 36px;
+      line-height: 1.3;
+    }
+  }
+
+  &__frame {
+    width: 100%;
+    max-height: unset !important;
+
+    canvas {
+      width: 100%;
+      height: 500px !important;
+      object-fit: cover;
+    }
+  }
+
+  &__features {
+    overflow: hidden;
+    margin-top: 68px;
+
+    .swiper-wrapper {
+      @include mq($l) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      @include mq($m) {
+        display: flex;
+        gap: 0;
+      }
+    }
+  }
+
+  &__feature {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include mq($m) {
+      gap: 28px;
+    }
+
+    &-label {
+      width: 100%;
+      padding: 15px;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 500;
+      color: var(--color-secondary-50);
+      text-transform: uppercase;
+      text-align: center;
+      border: 1px solid var(--color-secondary-50);
+
+      @include mq($l) {
+        font-size: 16px;
+      }
+
+      @include mq($m) {
+        font-size: 20px;
+        line-height: 1.2;
+        color: var(--color-white);
+        padding: 0;
+        border: none;
+      }
+
+      span {
+        @include mq($m) {
+          padding: 0 32px 12px 32px;
+          border-bottom: 1px solid var(--color-white);
+        }
+      }
+    }
+
+    &-desc {
+      font-size: 28px;
+      line-height: 1.25;
+      font-weight: 500;
+      text-align: center;
+
+      @include mq($l) {
+        font-size: 20px;
+      }
+
+      @include mq($m) {
+        font-size: 24px;
+      }
+    }
+  }
+}

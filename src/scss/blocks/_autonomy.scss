@@ -1,0 +1,314 @@
+@use "../base/imports" as *;
+
+.autonomy {
+  padding: 180px 0 0 0;
+
+  @include mq($l) {
+    padding: 100px 0 0 0;
+  }
+
+  &__head {
+    font-size: 92px;
+    line-height: 1;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 100px;
+
+    @include mq($l) {
+      font-size: 64px;
+      margin-bottom: 50px;
+    }
+
+    @include mq($m) {
+      font-size: 40px;
+      line-height: 1.1;
+      margin-bottom: 80px;
+    }
+
+    .word {
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      background-image: linear-gradient(
+        90deg,
+        #999999 2.48%,
+        #ffffff 48.73%,
+        #999999 94.98%
+      );
+    }
+  }
+
+  &__section {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+
+      @include mq($l) {
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    margin-bottom: 80px;
+
+    @include mq($l) {
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 32px;
+    line-height: 1.32;
+    color: var(--color-secondary-50);
+
+    @include mq($l) {
+      font-size: 24px;
+    }
+
+    @include mq($m) {
+      font-size: 20px;
+      line-height: 1.4;
+    }
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    align-items: center;
+    gap: 100px;
+
+    @include mq($l) {
+      gap: 40px;
+    }
+
+    @include mq($m) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__video {
+    display: block;
+    width: 100%;
+
+    @include mq($m) {
+      width: calc(100% + 40px);
+      margin: 0 -20px;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 76px;
+
+    @include mq($m) {
+      width: 100%;
+      gap: 48px;
+    }
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &-label {
+      width: 100%;
+      padding-bottom: 19px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      line-height: 1.2;
+      color: var(--color-secondary-50);
+      border-bottom: 1px solid var(--color-gray);
+
+      @include mq($m) {
+        font-size: 20px;
+        line-height: 1.2;
+        padding-bottom: 15px;
+        margin-bottom: 16px;
+      }
+    }
+
+    &-desc {
+      font-size: 32px;
+      line-height: 1.32;
+      font-weight: 500;
+
+      @include mq($l) {
+        font-size: 24px;
+      }
+
+      @include mq($m) {
+        font-size: 28px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+
+        @include mq($m) {
+          margin-bottom: 16px;
+        }
+      }
+
+      span {
+        display: block;
+        font-size: 24px;
+        line-height: 1.25;
+        color: var(--color-secondary-50);
+
+        @include mq($l) {
+          font-size: 20px;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+
+  &__benefits {
+    display: grid;
+    grid-template-columns: 3fr 2.6fr 2fr 3.4fr;
+    gap: 28px;
+    margin-bottom: 70px;
+
+    @include mq($l) {
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    @include mq($ms) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq($m) {
+      grid-template-columns: 100%;
+      gap: 28px;
+    }
+  }
+
+  &__benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 19px 27px;
+    border: 1px solid var(--color-white-40);
+
+    @include mq($l) {
+      padding: 15px 23px;
+      gap: 8px;
+    }
+
+    @include mq($m) {
+      padding: 0;
+      border: none;
+    }
+
+    &--main {
+      @include mq($m) {
+        width: 100%;
+        position: relative;
+        order: -1;
+        padding-bottom: 20px;
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: linear-gradient(
+            138.8deg,
+            #1970f6 -3.79%,
+            #3af0f0 37.13%,
+            #32ffcc 52.5%,
+            #3af0f0 71.9%,
+            #1970f6 108.79%
+          );
+        }
+      }
+    }
+
+    &-icon {
+      --size: 44px;
+      width: var(--size);
+      height: var(--size);
+      margin-top: auto;
+
+      @include mq($l) {
+        --size: 32px;
+      }
+
+      @include mq($m) {
+        --size: 44px;
+        order: -1;
+      }
+    }
+
+    &-label {
+      font-size: 24px;
+      line-height: 1.1112;
+      font-weight: 500;
+
+      @include mq($l) {
+        font-size: 20px;
+      }
+    }
+
+    &-value {
+      font-size: 40px;
+      line-height: 1.1;
+      font-weight: 600;
+      margin-bottom: 4px;
+
+      @include mq($l) {
+        font-size: 32px;
+      }
+
+      @include mq($m) {
+        font-size: 44px;
+      }
+
+      .word {
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        background-image: linear-gradient(
+          100.88deg,
+          #1970f6 -2.73%,
+          #3af0f0 69.61%,
+          #32ffcc 141.94%
+        );
+      }
+    }
+
+    &-desc {
+      font-size: 24px;
+      line-height: 1.2;
+      color: var(--color-secondary-50);
+
+      @include mq($l) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__motor {
+    display: block;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

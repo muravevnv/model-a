@@ -1,0 +1,144 @@
+@use "../base/imports" as *;
+
+.benefits {
+  padding: 180px 0 0 0;
+  color: var(--color-white);
+  overflow: hidden;
+
+  @include mq($l) {
+    padding: 100px 0 40px;
+  }
+
+  &__head {
+    max-width: 645px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    margin-bottom: 72px;
+  }
+
+  &__desc {
+    font-size: 24px;
+    line-height: 1.32;
+    font-weight: 500;
+  }
+
+  &__main {
+    position: relative;
+    padding: 68px 0;
+
+    @include mq($l) {
+      padding: 44px 0;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100vw;
+      height: 1px;
+      background-color: var(--color-white-40);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__item {
+    &:nth-of-type(odd) {
+      width: 560px;
+
+      @include mq($m) {
+        width: 288px;
+      }
+    }
+
+    &:nth-of-type(even) {
+      width: 460px;
+
+      @include mq($m) {
+        width: 288px;
+      }
+    }
+
+    &-img,
+    &-video {
+      display: block;
+      width: 100%;
+      height: 460px;
+      margin-bottom: 44px;
+      object-fit: cover;
+
+      @include mq($l) {
+        height: 380px;
+        margin-bottom: 20px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__video {
+
+    }
+
+    &-title {
+      margin-bottom: 16px;
+
+      @include mq($l) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &-desc {
+      font-size: 20px;
+      line-height: 1.4;
+      color: var(--color-secondary-50);
+
+      @include mq($l) {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    padding: 16px 0;
+
+    @include mq($l) {
+      display: none;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 100vw;
+      height: 1px;
+      background-color: var(--color-white-40);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    &::before {
+      bottom: 0;
+    }
+
+    &::after {
+      top: 0;
+    }
+  }
+}

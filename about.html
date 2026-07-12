@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{siteName}} — О нас</title>
+
+  <link rel="stylesheet" href="/src/scss/style.scss" />
+</head>
+<body>
+
+  {{> header }}
+
+  <main class="page">
+    <div class="container">
+      <h1>Страница «О нас»</h1>
+      <p>Так добавляются новые страницы: создаёшь .html в корне и прописываешь его в vite.config.js → build.rollupOptions.input.</p>
+    </div>
+  </main>
+
+  {{> footer }}
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

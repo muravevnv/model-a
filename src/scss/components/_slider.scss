@@ -1,0 +1,25 @@
+.slider-nav-btn {
+    --size: 52px;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-100);
+    color: var(--color-white);
+    cursor: pointer;
+
+    &.swiper-button-disabled {
+        background-color: var(--color-primary-900);
+        color: var(--color-secondary);
+    }
+
+    &--light {
+        background-color: var(--color-black-60);
+
+        &.swiper-button-disabled {
+            background-color: var(--color-black-12);
+            color: var(--color-gray-200);
+        }
+    }
+}

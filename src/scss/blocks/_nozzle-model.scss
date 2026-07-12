@@ -1,0 +1,79 @@
+@use "../base/imports" as *;
+
+.nozzle-model {
+  .container {
+    @include mq($ms) {
+      padding: 0;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    align-items: center;
+    padding: 70px 120px;
+    background-color: var(--color-gray);
+
+    @include mq($l) {
+      padding: 40px;
+      gap: 40px;
+    }
+
+    @include mq($ms) {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 72px 20px;
+    }
+  }
+
+  &__3d {
+    @include mq($ms) {
+      max-width: 260px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__desc {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--color-secondary);
+
+    @include mq($l) {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}
+
+#scene-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#canvas-holder {
+  width: 100%;
+  height: 454px;
+  cursor: grab;
+  touch-action: none;
+
+  @include mq($m) {
+    height: 280px;
+  }
+}
+
+#canvas-holder canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}

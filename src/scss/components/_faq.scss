@@ -1,0 +1,80 @@
+@use '../base/imports' as *;
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include mq($m) {
+        gap: 12px;
+    }
+}
+
+.faq-item {
+
+    &.is-active {
+
+        .faq-item__head {
+            border-color: #E3E3E3;
+
+            &::after {
+                background-image: url('/images/icons/faq-minus.svg');
+            }
+        }
+    }
+
+    &__head {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 15px 23px;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+        text-align: left;
+        background-color: var(--color-gray);
+        border: 1px solid var(--color-gray);
+        border-radius: 12px;
+        cursor: pointer;
+
+        @include mq($m) {
+            padding: 8px 16px;
+            font-size: 14px;
+            line-height: 1.1429;
+            border-radius: 8px;
+        }
+
+        &::after {
+            --size: 36px;
+            content: '';
+            width: var(--size);
+            height: var(--size);
+            flex-shrink: 0;
+            background: url('/images/icons/faq-plus.svg') center center / contain no-repeat;
+
+            @include mq($m) {
+                --size: 24px;
+            }
+        }
+    }
+
+    &__body {
+        height: 0;
+        color: var(--color-secondary);
+        overflow: hidden;
+        transition: height .3s ease;
+    }
+    
+    &__desc {
+        padding: 16px 24px 12px 24px;
+        font-size: 16px;
+        line-height: 1.32;
+
+        @include mq($m) {
+            padding: 12px;
+            font-size: 14px;
+        }
+    }
+}

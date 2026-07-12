@@ -1,0 +1,78 @@
+@use "../base/imports" as *;
+
+.account {
+  padding: 0 0 100px;
+
+  @include mq($l) {
+    padding-bottom: 60px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 39px 99px;
+    border: 2px solid var(--color-accent-primary);
+
+    @include mq($l) {
+      padding: 39px;
+    }
+
+    @include mq($m) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 19px;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 428px;
+    width: 100%;
+
+    @include mq($m) {
+      max-width: 148px;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+    @include mq($l) {
+      font-size: 32px;
+    }
+
+    @include mq($m) {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__desc {
+    font-size: 24px;
+    line-height: 1.32;
+    font-weight: 500;
+    color: var(--color-secondary);
+    margin-bottom: 52px;
+
+    @include mq($l) {
+      font-size: 16px;
+      line-height: 1.25;
+      margin-bottom: 40px;
+    }
+
+    @include mq($m) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__btn {
+    @include mq($m) {
+      width: 100%;
+    }
+  }
+}

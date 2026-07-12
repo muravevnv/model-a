@@ -1,0 +1,73 @@
+@use "../base/imports" as *;
+
+.reset-btn {
+    border: none;
+    outline: none;
+    color: unset;
+    padding: 0;
+    background-color: unset;
+}
+
+.btn {
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 11px;
+    font-size: 14px;
+    line-height: 1.2857;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+
+    @include mq-hover {
+        background-color: var(--color-secondary);
+        border-color: var(--color-secondary);
+        color: var(--color-white);
+    }
+
+    &--wide {
+        width: 100%;
+    }
+
+    &--xl {
+        padding: 13px 35px;
+        font-size: 20px;
+        line-height: 1.2;
+        gap: 8px;
+
+        @include mq($m)  {
+            font-size: 16px;
+            line-height: 1.1112;
+            padding: 12px 15px;
+        }
+    }
+
+    &--primary {
+        background-color: var(--color-accent-primary);
+        border-color: var(--color-accent-primary);
+        color: var(--color-white);
+    }
+
+    &--white {
+        background-color: var(--color-white);
+        border-color: var(--color-white);
+        color: var(--color-primary);
+    }
+
+
+    &--outline {
+        background-color: transparent;
+        border-color: var(--color-accent-primary);
+        color: var(--color-accent-primary);
+    }
+
+    &--ts-primary {
+        background-color: transparent;
+        border-color: transparent;
+        color: var(--color-accent-primary);
+    }
+}

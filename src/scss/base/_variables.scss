@@ -1,0 +1,52 @@
+:root {
+    --container-width: 1240px;
+    --pad: 20px;
+    
+    //Осовные цвета
+    --color-black: #000000;
+    --color-black-60: #00000099;
+    --color-black-12: #0000001F;
+    --color-white: #FFFFFF;
+    --color-white-40: #FFFFFF66;
+    --color-white-60: #FFFFFF99;
+    --color-primary: #333233;
+    --color-primary-50: #33323380;
+    --color-primary-100: #494949;
+    --color-primary-900: #1B1B1B;
+    --color-secondary: #636363;
+    --color-secondary-50: #BEBEBE;
+    --color-gray: #F3F3F5;
+    --color-gray-100: #DFDFDF;
+    --color-gray-200: #C1C5C8;
+    --color-gray-500: #6A6A6A;
+
+    //Акцентный цвета
+    --color-accent-pink: #FF3284;
+    --color-accent-pink-50: #FF328480;
+    --color-accent-pink-100: #FFD3D6;
+    --color-accent-blue: #1970F6;
+    --color-accent-blue-50: #1970F680;
+    --color-accent-blue-100: #26A4E3;
+    --color-accent-primary: #531033;
+    
+    //Состояния
+    --color-purple: #554DEA;
+    --color-error: #ED4B48;
+    --color-error-secondary: #F26866;
+    --color-success: #63D87C;
+    --color-success-secondary: #74D789; 
+
+    //Тэги
+
+    --font-primary: 'Nekst', sans-serif;
+}
+
+$container-width: 1200px;
+
+$xs: 479.98px;
+$s: 559.98px;
+$m: 767.98px;
+$ms: 1023.98px;
+$l: 1279.98px;
+$ls: 1439.98px;
+$xl: 1919.98px;

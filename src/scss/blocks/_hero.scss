@@ -1,0 +1,123 @@
+@use "../base/imports" as *;
+
+.hero {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+
+  &__video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.44);
+    z-index: 0;
+    opacity: 0;
+  }
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px;
+    position: relative;
+    z-index: 1;
+
+    @include mq($m) {
+      padding: 28px 20px;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: auto 0;
+    color: var(--color-white);
+
+    @include mq($m) {
+      gap: 4px;
+    }
+
+    &-title {
+      font-size: 92px;
+      line-height: 1;
+      text-align: center;
+      font-weight: 600;
+
+      @include mq($l) {
+        font-size: 78px;
+      }
+
+      @include mq($m) {
+        font-size: 64px;
+        line-height: 1.25;
+      }
+    }
+
+    &-subtitle {
+      max-width: 415px;
+      font-size: 32px;
+      line-height: 1.32;
+      font-weight: 500;
+      text-align: center;
+
+      @include mq($m) {
+        max-width: 258px;
+        font-size: 20px;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    @include mq($m) {
+      gap: 8px;
+    }
+  }
+
+  &__price {
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--color-white);
+
+    @include mq($m) {
+      font-size: 16px;
+      line-height: 1.25;
+    }
+  }
+}
+
+.words {
+  overflow: hidden;
+}
+
+.word {
+  display: inline-block; // обязательно, иначе transform не работает на inline
+}

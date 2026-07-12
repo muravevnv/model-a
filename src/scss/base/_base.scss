@@ -1,0 +1,86 @@
+@use "imports" as *;
+
+.container {
+  max-width: var(--container-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+.icon-svg {
+  display: block;
+  --icon-size: 16px;
+  width: var(--icon-size);
+  height: var(--icon-size);
+
+  &--20 {
+    --icon-size: 20px;
+  }
+
+  &--24 {
+    --icon-size: 24px;
+  }
+
+  &--32 {
+    --icon-size: 32px;
+  }
+
+  &--36 {
+    --icon-size: 36px;
+  }
+}
+
+.h1 {
+}
+
+.h2 {
+  font-size: 48px;
+  line-height: 1.25;
+  font-weight: 600;
+
+  @include mq($l) {
+    font-size: 40px;
+  }
+
+  @include mq($m) {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+}
+
+.h3 {
+  font-size: 32px;
+  line-height: 1.32;
+  font-weight: 600;
+
+  @include mq($ms) {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+
+.h4 {
+  font-size: 28px;
+  line-height: 1.32;
+  font-weight: 600;
+
+  @include mq($l) {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}
+
+.bg-black {
+  background-color: var(--color-black);
+}
+
+.section {
+  position: relative;
+  background-color: var(--color-white);
+  z-index: 1;
+}
+
+.section-black {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}

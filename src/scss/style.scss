@@ -1,0 +1,34 @@
+@use 'swiper/css';
+@use 'swiper/css/navigation';
+@use 'swiper/css/pagination';
+
+@use 'base/fonts';
+@use 'base/imports';
+@use 'base/reset';
+@use 'base/base';
+
+@use 'components/btn';
+@use 'components/header';
+@use 'components/footer';
+@use 'components/slider';
+@use 'components/product-info-bnr';
+@use 'components/labels';
+@use 'components/counter';
+@use 'components/faq';
+
+@use 'blocks/hero';
+@use 'blocks/instrument';
+@use 'blocks/cta';
+@use 'blocks/history';
+@use 'blocks/benefits';
+@use 'blocks/device';
+@use 'blocks/calc';
+@use 'blocks/int-property';
+@use 'blocks/nozzle';
+@use 'blocks/nozzle-model';
+@use 'blocks/aestetic';
+@use 'blocks/bnr';
+@use 'blocks/autonomy';
+@use 'blocks/passport';
+@use 'blocks/complect';
+@use 'blocks/account';

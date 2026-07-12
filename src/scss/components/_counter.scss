@@ -1,0 +1,45 @@
+@use '../base/imports' as *;
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    width: 80px;
+    padding: 4px 7px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px;
+
+    &--xl {
+        width: 95px;
+        padding: 15px 11px;
+
+        @include mq($m) {
+            padding: 9px 11px;
+        }
+    }
+
+    &__btn {
+        --size: 20px;
+        width: var(--size);
+        height: var(--size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: var(--color-secondary);
+        cursor: pointer;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+        height: 20px;
+        text-align: center;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+}

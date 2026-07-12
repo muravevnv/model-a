@@ -1,0 +1,89 @@
+@use "../base/imports" as *;
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-white-40);
+
+  @include mq($l) {
+    height: 56px;
+  }
+
+  &.is-fixed {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(30px);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq($l) {
+      gap: 12px;
+    }
+  }
+
+  &__action {
+    display: flex;
+    margin-left: auto;
+    border-left: 1px solid var(--color-white-40);
+  }
+
+  &__btn {
+    display: inline-block;
+    width: auto;
+    height: 80px;
+    padding: 28px 36px;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    text-align: center;
+    color: var(--color-white);
+    background-color: transparent;
+    cursor: pointer;
+
+    @include mq($l) {
+      padding: 19px 20px;
+      height: 56px;
+      font-size: 16px;
+      line-height: 1.1112;
+    }
+
+    &--white {
+      background-color: var(--color-white);
+      color: var(--color-primary);
+    }
+  }
+
+  &__reg {
+    @include mq($m) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    width: 120px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    border-right: 1px solid var(--color-white-40);
+    border-left: 1px solid var(--color-white-40);
+    cursor: pointer;
+
+    @include mq($l) {
+      width: 48px;
+      height: 56px;
+      border-right: none;
+      border-left: none;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use "../base/imports" as *;
+
+.calc {
+  padding: 140px 0 0;
+
+  @include mq($l)  {
+    padding: 84px 0 0;
+  }
+
+  &__head {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 36px;
+    margin-bottom: 100px;
+
+    @include mq($l) {
+        align-items: flex-start;
+        gap: 28px;
+        padding: 0 20px;
+        margin-bottom: 52px;
+    }
+  }
+
+  &__desc {
+    font-size: 24px;
+    line-height: 1.32;
+
+    @include mq($l) {
+        font-size: 16px;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    transform: scale(0.6);
+
+    img {
+        display: block;
+        width: 100%;
+    }
+  }
+}
