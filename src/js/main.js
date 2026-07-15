@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import { initPlugForm } from './modules/form-plug.js';
 import { initFixedHeader } from './modules/header.js';
 import { initSliders } from './modules/sliders.js';
 import { initFadeAnimations } from './modules/fade-animations.js';
@@ -17,6 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    initPlugForm();
     initFixedHeader('.js-header');
     initSliders();
     initTitleAnimations();

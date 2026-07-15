@@ -70,4 +70,11 @@
         border-color: transparent;
         color: var(--color-accent-primary);
     }
+
+    &[disabled],
+    .disabled {
+        background-color: var(--color-gray-100);
+        color: var(--color-gray-200);
+        pointer-events: none;
+    }
 }

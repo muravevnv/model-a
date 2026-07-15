@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{siteName}} — Главная</title>
+
+    <link rel="stylesheet" href="/src/scss/style.scss" />
+</head>
+
+<body>
+
+    {{> header-empty }}
+
+    <main class="page">
+        <section class="plug">
+            <picture class="plug__bg">
+                <source srcset="images/plug/plug-sm.webp" media="(max-width: 559.98px)">
+                <img src="images/plug/plug.webp" alt="">
+            </picture>
+            <div class="container">
+                <div class="plug__title">Август 2026</div>
+                <form action="#" class="plug__form">
+                    <div class="plug__form-title">Напомнить о релизе</div>
+                    <input type="email" class="plug__form-input" placeholder="email">
+                    <div class="plug__form-bottom">
+                        <label class="plug__form-checkbox">
+                            <input type="checkbox" name="condition">
+                            <span class="plug__form-checkbox-icon"></span>
+                            <span class="plug__form-checkbox-title">
+                                Даю согласие на обработку персональных данных сайтом the-modela.ru и отправку
+                                информационных сообщений.
+                            </span>
+                        </label>
+                        <button type="submit" class="plug__form-btn btn btn--xl btn--wide btn--primary"
+                            disabled>Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    {{> footer-empty }}
+
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>

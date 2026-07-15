@@ -78,6 +78,10 @@ export function initSliders() {
 }
 
 window.addEventListener('load', () => {
-    benefitsSliderSwiper.update();
-    benefitsSliderSwiper.navigation.update();
+
+    if (document.querySelector('.js-benefits-slider')) {
+        benefitsSliderSwiper.update();
+        benefitsSliderSwiper.navigation.update();
+    }
+
 });
