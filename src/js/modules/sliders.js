@@ -6,7 +6,7 @@ export function initSliders() {
     const benefitsSlider = document.querySelector('.js-benefits-slider');
 
     if (benefitsSlider) {
-        new Swiper(benefitsSlider, {
+        const benefitsSliderSwiper = new Swiper(benefitsSlider, {
             modules: [Navigation],
             slidesPerView: 'auto',
             spaceBetween: 40,
@@ -76,12 +76,3 @@ export function initSliders() {
         });
     }
 }
-
-window.addEventListener('load', () => {
-
-    if (document.querySelector('.js-benefits-slider')) {
-        benefitsSliderSwiper.update();
-        benefitsSliderSwiper.navigation.update();
-    }
-
-});
