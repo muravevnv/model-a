@@ -19,6 +19,11 @@
     backdrop-filter: blur(30px);
   }
 
+  &--secondary {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(30px);
+  }
+
   &__wrapper {
     width: 100%;
     position: relative;
@@ -74,7 +79,9 @@
     color: var(--color-white);
     background-color: transparent;
     cursor: pointer;
-    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    transition:
+      background-color 0.25s ease-in-out,
+      color 0.25s ease-in-out;
 
     @include mq($l) {
       padding: 12px 16px;

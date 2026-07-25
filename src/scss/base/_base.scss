@@ -88,3 +88,11 @@
   background-color: var(--color-black);
   color: var(--color-white);
 }
+
+.inner-page {
+  padding-top: 140px;
+
+  @include mq($l) {
+    padding-top: 80px;
+  }
+}
