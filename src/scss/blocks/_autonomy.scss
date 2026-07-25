@@ -1,10 +1,10 @@
 @use "../base/imports" as *;
 
 .autonomy {
-  padding: 180px 0 0 0;
+  padding: 140px 0 100px 0;
 
   @include mq($l) {
-    padding: 100px 0 0 0;
+    padding: 50px 0;
   }
 
   &__head {
@@ -20,9 +20,9 @@
     }
 
     @include mq($m) {
-      font-size: 40px;
+      font-size: 32px;
       line-height: 1.1;
-      margin-bottom: 80px;
+      margin-bottom: 40px;
     }
 
     .word {
@@ -46,6 +46,10 @@
       @include mq($l) {
         margin-bottom: 80px;
       }
+
+      @include mq($m) {
+        margin-bottom: 40px;
+      }
     }
   }
 
@@ -60,6 +64,10 @@
     @include mq($l) {
       gap: 8px;
       margin-bottom: 40px;
+    }
+
+    @include mq($m) {
+      margin-bottom: 24px;
     }
   }
 
@@ -111,7 +119,7 @@
 
     @include mq($m) {
       width: 100%;
-      gap: 48px;
+      gap: 32px;
     }
   }
 
@@ -130,10 +138,10 @@
       border-bottom: 1px solid var(--color-gray);
 
       @include mq($m) {
-        font-size: 20px;
-        line-height: 1.2;
-        padding-bottom: 15px;
-        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 1.25;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
       }
     }
 
@@ -147,7 +155,7 @@
       }
 
       @include mq($m) {
-        font-size: 28px;
+        font-size: 20px;
       }
 
       &:not(:last-child) {
@@ -165,7 +173,7 @@
         color: var(--color-secondary-50);
 
         @include mq($l) {
-          font-size: 20px;
+          font-size: 16px;
           line-height: 1.4;
         }
       }
@@ -176,11 +184,9 @@
     display: grid;
     grid-template-columns: 3fr 2.6fr 2fr 3.4fr;
     gap: 28px;
-    margin-bottom: 70px;
 
     @include mq($l) {
       gap: 24px;
-      margin-bottom: 48px;
     }
 
     @include mq($ms) {
@@ -212,11 +218,18 @@
     }
 
     &--main {
+      background: linear-gradient(
+        161.41deg,
+        rgba(58, 240, 240, 0.14) -7.11%,
+        rgba(25, 112, 246, 0.14) 87.42%
+      );
+
       @include mq($m) {
         width: 100%;
         position: relative;
         order: -1;
         padding-bottom: 20px;
+        background: transparent;
 
         &::before {
           content: "";
@@ -248,7 +261,6 @@
       }
 
       @include mq($m) {
-        --size: 44px;
         order: -1;
       }
     }
@@ -260,6 +272,7 @@
 
       @include mq($l) {
         font-size: 20px;
+        line-height: 1.25;
       }
     }
 
@@ -268,26 +281,23 @@
       line-height: 1.1;
       font-weight: 600;
       margin-bottom: 4px;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      background-image: linear-gradient(
+        100.88deg,
+        #1970f6 -2.73%,
+        #3af0f0 69.61%,
+        #32ffcc 141.94%
+      );
 
       @include mq($l) {
         font-size: 32px;
       }
 
       @include mq($m) {
-        font-size: 44px;
-      }
-
-      .word {
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: transparent;
-        background-image: linear-gradient(
-          100.88deg,
-          #1970f6 -2.73%,
-          #3af0f0 69.61%,
-          #32ffcc 141.94%
-        );
+        font-size: 28px;
       }
     }
 
@@ -297,18 +307,18 @@
       color: var(--color-secondary-50);
 
       @include mq($l) {
-        font-size: 20px;
+        font-size: 16px;
+        line-height: 1.25;
       }
     }
   }
+}
 
-  &__motor {
+.motor {
+  width: 100%;
+
+  &__video {
     display: block;
     width: 100%;
-
-    img {
-      display: block;
-      width: 100%;
-    }
   }
 }

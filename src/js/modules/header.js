@@ -14,3 +14,15 @@ export function initFixedHeader(selector = '.js-header', threshold = 0) {
 
     window.addEventListener('scroll', toggleFixed, { passive: true });
 }
+
+export function initHeaderMenu(){
+    const headerBurger = document.querySelector('.js-header-burger');
+    const headerMenu = document.querySelector('.js-header-menu');
+
+    if(headerBurger || headerMenu) {
+        headerBurger.addEventListener('click', () => {
+            headerBurger.classList.toggle('is-active');
+            headerMenu.classList.toggle('is-open');
+        })
+    }
+}

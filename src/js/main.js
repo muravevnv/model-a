@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { initPlugForm } from './modules/form-plug.js';
-import { initFixedHeader } from './modules/header.js';
+import { initFixedHeader, initHeaderMenu } from './modules/header.js';
 import { initSliders } from './modules/sliders.js';
 import { initFadeAnimations } from './modules/fade-animations.js';
 import { initTitleAnimations } from './modules/title-animations.js';
@@ -11,7 +11,7 @@ import { initHistoryScroll } from './modules/history-scroll.js';
 import { initCalcScroll } from './modules/calc-scroll.js';
 import { initScrollSequence } from './modules/scroll-sequence.js';
 import { initScrollVideos } from './modules/scroll-video.js';
-
+import { initAdvantagesTabs } from './modules/advantages.js';
 import './modules/model.js';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -20,11 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initPlugForm();
     initFixedHeader('.js-header');
+    initHeaderMenu();
     initSliders();
     initTitleAnimations();
     initFadeAnimations();
     initHero();
-
+    initAdvantagesTabs();
+    
     // порядок ниже важен: должен соответствовать порядку блоков в DOM,
     // особенно для pin-триггеров (history и scroll-sequence)
     initHistoryScroll();
@@ -32,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollSequence();
 
     initScrollVideos();
+
 
     window.addEventListener('load', () => {
         ScrollTrigger.refresh();

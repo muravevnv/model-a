@@ -6,13 +6,12 @@
   top: 0;
   left: 0;
   z-index: 10;
-  height: 80px;
+  height: 60px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--color-white-40);
 
   @include mq($l) {
-    height: 56px;
+    height: 40px;
   }
 
   &.is-fixed {
@@ -20,13 +19,40 @@
     backdrop-filter: blur(30px);
   }
 
+  &__wrapper {
+    width: 100%;
+    position: relative;
+    height: 60px;
+    border-bottom: 1px solid var(--color-white-40);
+    z-index: 10;
+
+    @include mq($l) {
+      height: 40px;
+    }
+  }
+
   &__inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     @include mq($l) {
       gap: 12px;
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 180px;
+
+    @include mq($m) {
+      width: 80px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
     }
   }
 
@@ -39,21 +65,27 @@
   &__btn {
     display: inline-block;
     width: auto;
-    height: 80px;
-    padding: 28px 36px;
-    font-size: 20px;
-    line-height: 1.2;
+    height: 60px;
+    padding: 20px 24px;
+    font-size: 16px;
+    line-height: 1.25;
     font-weight: 500;
     text-align: center;
     color: var(--color-white);
     background-color: transparent;
     cursor: pointer;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 
     @include mq($l) {
-      padding: 19px 20px;
-      height: 56px;
-      font-size: 16px;
+      padding: 12px 16px;
+      height: 40px;
+      font-size: 14px;
       line-height: 1.1112;
+    }
+
+    @include mq-hover {
+      background-color: var(--color-white-40);
+      color: var(--color-white);
     }
 
     &--white {
@@ -69,8 +101,8 @@
   }
 
   &__burger {
-    width: 120px;
-    height: 80px;
+    width: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,10 +112,107 @@
     cursor: pointer;
 
     @include mq($l) {
-      width: 48px;
-      height: 56px;
+      width: 40px;
+      height: 40px;
       border-right: none;
       border-left: none;
+    }
+
+    &-close {
+      display: none;
+    }
+
+    &.is-active {
+      .header__burger-close {
+        display: block;
+      }
+
+      .header__burger-menu {
+        display: none;
+      }
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background: #271817;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+
+    &.is-open {
+      transform: translateX(0);
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .container {
+      height: 100%;
+    }
+  }
+
+  &__nav {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include mq($m) {
+      padding: 80px 0 40px;
+    }
+
+    &-section {
+      &:not(:last-of-type) {
+        margin-bottom: 40px;
+
+        @include mq($m) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    &-title {
+      font-size: 32px;
+      line-height: 1.2;
+      font-weight: 500;
+      color: var(--color-white);
+      margin-bottom: 16px;
+
+      @include mq($m) {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+    }
+
+    &-link {
+      display: block;
+      font-size: 20px;
+      line-height: 1.2;
+      color: rgba(255, 255, 255, 0.8);
+      transition: opacity 0.25s ease-in-out;
+
+      @include mq($m) {
+        font-size: 14px;
+      }
+
+      @include mq-hover {
+        opacity: 0.4;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+
+        @include mq($m) {
+          margin-bottom: 4px;
+        }
+      }
     }
   }
 }

@@ -50,18 +50,44 @@
 						Оригинальное устройство от автора метода AIRTOUCH Владимира Сарбашева и команды инженеров REMEZ.
 					</div>
 				</div>
+				<div class="instrument__bottom">
+					<div class="instrument__bloquote">
+						<div class="instrument__bloquote-main">
+							<picture class="instrument__bloquote-img">
+								<img src="images/instrument/author.webp" alt="">
+							</picture>
+							<div class="instrument__bloquote-desc">
+								<div class="instrument__bloquote-text">
+									Мы видели, как мастера годами пытаются приспособить обычные фены и воздуходувки для
+									AirTouch. Неправильный поток, шум, вес, просадка батареи, отсутствие нормального
+									концентратора.
+									Мы могли бы адаптировать что-то готовое, но черта моего характера: нужно либо лучше,
+									либо ничего. Поэтому мы создали Model A с нуля - на 110% под требования технологии.
+								</div>
+							</div>
+						</div>
+						<div class="instrument__bloquote-bottom">
+							<div class="instrument__bloquote-title">Владимир Сарбашев</div>
+							<button type="button" class="instrument__bloquote-btn reset-btn">
+								<svg class="icon-svg icon-svg--24" aria-hidden="true">
+									<use xlink:href="./images/sprite.svg#plus"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 		<section class="history section js-history">
 			<video src="images/history/history.mp4" autoplay playsinline muted loop class="history__video"></video>
 			<div class="history__inner js-history-info">
-				<div class="history__title h2">
+				<div class="history__title h2" data-animation="fade-up" data-delay="0.2" data-distance="60">
 					Философия Model A. Почему мы его создали
 				</div>
-				<div class="history__subtitle">
+				<div class="history__subtitle" data-animation="fade-up" data-delay="0.5" data-distance="60">
 					Метод AirTouch — это контролируемое разделение слоев с помощью потока воздуха
 				</div>
-				<div class="history__desc">
+				<div class="history__desc" data-animation="fade-up" data-delay="0.5" data-distance="60">
 					<p>
 						До настоящего времени глобальные участники рынка создавали устройства для сушки волос
 					</p>
@@ -81,7 +107,7 @@
 					<div class="benefits__title h2" data-animation="title">
 						Сложное окрашивание перестает быть сложным
 					</div>
-					<div class="benefits__desc" data-animation="fade-up" data-delay="0.5" data-distance="60">
+					<div class="benefits__desc" data-animation="fade-up" data-delay="0.3" data-distance="60">
 						Каждый элемент направлен повышать мастерство и скорость процесса.
 					</div>
 				</div>
@@ -89,7 +115,8 @@
 					<div class="benefits__slider js-benefits-slider">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide benefits__item">
-								<video class="benefits__item-video" data-scroll-video src="images/benefits/benefit-01.mp4" playsinline muted loop></video>
+								<video class="benefits__item-video" data-scroll-video
+									src="images/benefits/benefit-01.mp4" playsinline muted loop></video>
 								<div class="benefits__item-info">
 									<div class="benefits__item-title h4">Моментально чистое разделение</div>
 									<div class="benefits__item-desc">
@@ -111,7 +138,8 @@
 								</div>
 							</div>
 							<div class="swiper-slide benefits__item">
-								<video class="benefits__item-video" src="images/benefits/benefit-02.mp4" playsinline muted loop></video>
+								<video class="benefits__item-video" src="images/benefits/benefit-02.mp4" playsinline
+									muted loop></video>
 								<div class="benefits__item-info">
 									<div class="benefits__item-title h4">Моментально чистое разделение</div>
 									<div class="benefits__item-desc">
@@ -152,8 +180,9 @@
 		<section class="device section section-black">
 			<div class="container">
 				<div class="device__head">
-					<div class="device__subtitle" data-animation="fade-up" data-delay="0" data-distance="60">Абсолютный эталон от инженеров REMEZ</div>
-					<div class="device__title" data-animation="title">
+					<div class="device__subtitle" data-animation="fade-up" data-delay="0" data-distance="60">Абсолютный
+						эталон от инженеров REMEZ</div>
+					<div class="device__title h2" data-animation="title">
 						Выдающиеся параметры, объединенные в&nbsp;компактный корпус
 					</div>
 				</div>
@@ -184,9 +213,9 @@
 								<span>автономность</span>
 							</div>
 							<div class="device__feature-desc">
-								12 минут
+								9 минут
 								<br>
-								8-12 зон окрашивания
+								до 12 зон окрашивания
 							</div>
 						</div>
 						<div class="swiper-slide device__feature">
@@ -194,10 +223,22 @@
 								<span>поток</span>
 							</div>
 							<div class="device__feature-desc">
-								43 л/сек
+								14 л/с, 40 м/с, 144 км/час
 							</div>
 						</div>
 					</div>
+					<button type="button"
+						class="device__features-btn device__features-btn--prev reset-btn js-features-slider-prev">
+						<svg class="icon-svg icon-svg--20" aria-hidden="true">
+							<use xlink:href="./images/sprite.svg#chevron-left"></use>
+						</svg>
+					</button>
+					<button type="button"
+						class="device__features-btn device__features-btn--next reset-btn js-features-slider-next">
+						<svg class="icon-svg icon-svg--20" aria-hidden="true">
+							<use xlink:href="./images/sprite.svg#chevron-right"></use>
+						</svg>
+					</button>
 				</div>
 			</div>
 		</section>
@@ -224,7 +265,8 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide int-property__item int-property__item--xl">
 							<div class="int-property__item-main">
-								<video class="int-property__item-video" src="images/int-property/aerodynamic.mp4" playsinline muted loop data-scroll-video></video>
+								<video class="int-property__item-video" src="images/int-property/aerodynamic.mp4"
+									playsinline muted loop data-scroll-video></video>
 								<div class="int-property__item-label">
 									запатентовано №...
 								</div>
@@ -303,13 +345,19 @@
 						</div>
 					</div>
 				</div>
-				<video src="images/nozzle/nozzle.mp4" playsinline autoplay muted class="nozzle__video"></video>
+				<video playsinline autoplay muted class="nozzle__video">
+					<source src="images/nozzle/nozzle-mob.mp4" media="(max-width: 559.98px)">
+					<source src="images/nozzle/nozzle.mp4">
+				</video>
 				<div class="nozzle__bottom">
 					<div class="container">
 						<div class="nozzle__desc">
 							Создает правильное распределение потока — одинаковое качество выдува по всей ширине пряди.
 						</div>
 					</div>
+					<picture class="nozzle__img">
+						<img src="images/nozzle/nozzle-aeromig.webp" alt="">
+					</picture>
 				</div>
 			</div>
 		</section>
@@ -359,6 +407,135 @@
 				</div>
 			</div>
 		</section>
+		<section class="motor section">
+			<video src="/images/autonomy/motor.mp4" playsinline autoplay loop muted class="motor__video">
+			</video>
+		</section>
+		<section class="advantages section section-black js-advantages">
+			<div class="container">
+				<div class="advantages__title h2">Комфортный и Безопасный</div>
+			</div>
+			<div class="advantages__inner">
+				<div class="container">
+					<div class="advantages__nav">
+						<div class="advantages__nav-arrows">
+							<button class="advantages__nav-prev reset-btn js-advantages-nav-prev">
+								<svg class="icon-svg icon-svg--20" aria-hidden="true">
+									<use xlink:href="./images/sprite.svg#arrow-up"></use>
+								</svg>
+							</button>
+							<button class="advantages__nav-next reset-btn js-advantages-nav-next">
+								<svg class="icon-svg icon-svg--20" aria-hidden="true">
+									<use xlink:href="./images/sprite.svg#arrow-down"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="advantages__nav-sections">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide advantages__nav-section js-advantages-nav-section">
+									<button type="button" class="advantages__nav-btn reset-btn js-advantages-nav-btn"
+										data-btn="1">
+										<div class="advantages__nav-btn-icon"></div>
+										<div class="advantages__nav-btn-title">Защита волос NOTARcore</div>
+									</button>
+									<div class="advantages__nav-content js-advantages-nav-content">
+										<div class="advantages__nav-desc">
+											Cоздано на основе технологий вертолетной промышленности. Работайте вплотную
+											к
+											корню, не опасаясь, что прядь затянет внутрь. Волосы клиента остаются в
+											полной
+											безопасности, а воздушный поток сохраняет мощность и ламинарную структуру.
+										</div>
+									</div>
+
+								</div>
+								<div class="swiper-slide advantages__nav-section js-advantages-nav-section">
+									<button type="button" class="advantages__nav-btn reset-btn js-advantages-nav-btn"
+										data-btn="2">
+										<div class="advantages__nav-btn-icon"></div>
+										<div class="advantages__nav-btn-title">Шумоподавление QASCore</div>
+									</button>
+									<div class="advantages__nav-content js-advantages-nav-content">
+										<div class="advantages__nav-desc">
+											Работайте в акустической тишине. Сбалансированный звук без шума и высоких
+											частот. Спокойное общение в процессе и отсутствие акустической усталости для
+											вас, комфорт клиента.
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide advantages__nav-section js-advantages-nav-section">
+									<button type="button" class="advantages__nav-btn reset-btn js-advantages-nav-btn"
+										data-btn="3">
+										<div class="advantages__nav-btn-icon"></div>
+										<div class="advantages__nav-btn-title">Свобода позиционирования</div>
+									</button>
+									<div class="advantages__nav-content js-advantages-nav-content">
+										<div class="advantages__nav-desc">
+											Чистый выдув без выверенного центрования относительно пряди и независимо от
+											угла
+											наклона устройства. Model A прощает смещение до 1,5 см. Пик давления
+											находится
+											там, где лежит прядь — для лучшего результата.
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide advantages__nav-section js-advantages-nav-section">
+									<button type="button" class="advantages__nav-btn reset-btn js-advantages-nav-btn"
+										data-btn="4">
+										<div class="advantages__nav-btn-icon"></div>
+										<div class="advantages__nav-btn-title">Магнитные фиксаторы MagDock System</div>
+									</button>
+									<div class="advantages__nav-content js-advantages-nav-content">
+										<div class="advantages__nav-desc">
+											Model A в одно движение надежно фиксируется на металлической рабочей
+											поверхности
+											в удобном для руки положении. И так же в одно движение снимается с магнита.
+											Меньше падений, больше скорости в процессе. Эргономика, которую сложно
+											недооценить.
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="advantages__stage">
+					<div class="advantages__section js-advantages-section" data-section="preview">
+						<div class="advantages-base">
+							<picture class="advantages-base__img">
+								<img src="images/advantages/advantages-preview.webp" alt="">
+							</picture>
+						</div>
+					</div>
+					<div class="advantages__section js-advantages-section" data-section="1">
+						<div class="advantages-protection">
+							<video src="images/advantages/advantages-01.mp4" class="advantages-protection__video"
+								autoplay playsinline muted loop></video>
+						</div>
+					</div>
+					<div class="advantages__section js-advantages-section" data-section="2">
+						<div class="advantages-qascore">
+							<video src="images/advantages/advantages-02.mp4" class="advantages-qascore__video" autoplay
+								playsinline muted loop></video>
+						</div>
+					</div>
+					<div class="advantages__section js-advantages-section" data-section="3">
+						<div class="advantages-positioning">
+							<video src="images/advantages/advantages-03.mp4" class="advantages-positioning__video"
+								autoplay playsinline muted loop></video>
+						</div>
+					</div>
+					<div class="advantages__section js-advantages-section" data-section="4">
+						<div class="advantages-magnetic">
+							<video src="images/advantages/advantages-04.mp4" class="advantages-magnetic__video" autoplay
+								playsinline muted loop></video>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section class="bnr section section-black">
 			<div class="bnr__info">
 				<div class="container">
@@ -371,9 +548,7 @@
 					</div>
 				</div>
 			</div>
-			<picture class="bnr__video">
-				<img src="images/preview.webp" alt="">
-			</picture>
+			<video class="bnr__video" src="images/bnr/bnr-01.mp4" autoplay loop muted playsinline></video>
 		</section>
 		<section class="bnr bnr--to-right section section-black">
 			<div class="bnr__info">
@@ -389,7 +564,7 @@
 				</div>
 			</div>
 			<picture class="bnr__video">
-				<img src="images/preview.webp" alt="">
+				<img src="images/bnr/bnr-02.webp" alt="">
 			</picture>
 		</section>
 		<section class="autonomy section section-black">
@@ -479,21 +654,19 @@
 
 				</div>
 			</div>
-			<video src="/images/autonomy/motor.mp4" playsinline autoplay loop muted class="autonomy__motor">
-			</video>
 		</section>
 		<section class="passport section">
 			<div class="container">
 				<div class="passport__inner">
 					<div class="passport__head" data-animation="fade-up" data-delay="0" data-distance="60"
-						data-duration="0.8">
+						data-duration="0.2">
 						<div class="passport__title h2">
 							Технический паспорт
 						</div>
 						<a href="#" class="passport__link">Смотреть</a>
 					</div>
 					<picture class="passport__img" data-animation="fade-up" data-delay="0.2" data-distance="60"
-						data-duration="0.8">
+						data-duration="0.2">
 						<img src="images/passport/tech.webp" alt="">
 					</picture>
 				</div>
@@ -502,14 +675,14 @@
 		<section class="complect section">
 			<div class="container">
 				<div class="complect__head" data-animation="fade-up" data-delay="0" data-distance="60"
-					data-duration="0.8">
+					data-duration="0.5">
 					<div class="complect__label">Скоро</div>
 					<div class="complect__title h3">
 						Станция для зарядки и хранения аккумуляторов
 					</div>
 				</div>
 				<div class="complect__gallery" data-animation="fade-up" data-delay="0.2" data-distance="60"
-					data-duration="0.8">
+					data-duration="0.5">
 					<picture class="complect__img">
 						<img src="images/complect/img-01.webp" alt="">
 					</picture>

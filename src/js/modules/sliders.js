@@ -9,7 +9,7 @@ export function initSliders() {
         const benefitsSliderSwiper = new Swiper(benefitsSlider, {
             modules: [Navigation],
             slidesPerView: 'auto',
-            spaceBetween: 40,
+            spaceBetween: 24,
             observer: true,
             observeSlideChildren: true,
             breakpoints: {
@@ -33,7 +33,7 @@ export function initSliders() {
         const intPropertySliderSwiper = new Swiper(intPropertySlider, {
             modules: [Navigation],
             slidesPerView: 'auto',
-            spaceBetween: 40,
+            spaceBetween: 24,
             observer: true,
             observeSlideChildren: true,
             breakpoints: {

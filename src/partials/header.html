@@ -1,22 +1,68 @@
 <header class="header js-header">
-  <div class="container">
-    <div class="header__inner">
-      <a href="/" class="header__logo">
-        <picture>
-          <source srcset="/images/logo.svg" media="(max-width: 767.98px)">
-          <img src="/images/logo-model-a.svg" alt="REMEZ">
-        </picture>
-       
-      </a>
-      <div class="header__action">
-        <a href="#" class="header__btn header__reg">Зарегистрировать</a>
-        <a href="#" class="header__btn header__btn--white">Заказать</a>
+  <div class="header__wrapper">
+    <div class="container">
+      <div class="header__inner">
+        <a href="/" class="header__logo">
+          <picture>
+            <source srcset="/images/logo.svg" media="(max-width: 767.98px)">
+            <img src="/images/logo-model-a.svg" alt="REMEZ">
+          </picture>
+
+        </a>
+        <div class="header__action">
+          <a href="#" class="header__btn header__reg">Зарегистрировать</a>
+          <a href="#" class="header__btn header__btn--white">Заказать</a>
+        </div>
+        <button type="button" class="header__burger reset-btn js-header-burger">
+          <svg class="header__burger-menu icon-svg icon-svg--24" aria-hidden="true">
+            <use xlink:href="./images/sprite.svg#burger"></use>
+          </svg>
+          <svg class="header__burger-close icon-svg icon-svg--24" aria-hidden="true">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
       </div>
-      <button type="button" class="header__burger reset-btn">
-        <svg class="icon-svg icon-svg--32" aria-hidden="true">
-          <use xlink:href="./images/sprite.svg#burger"></use>
-        </svg>
-      </button>
+    </div>
+  </div>
+
+  <div class="header__menu js-header-menu">
+    <div class="container">
+      <nav class="header__nav">
+        <div class="header__nav-section">
+          <div class="header__nav-title">
+            Дополнения
+          </div>
+          <a href="#" class="header__nav-link">Аккумулятор</a>
+          <a href="#" class="header__nav-link">Комплект аккумуляторов</a>
+          <a href="#" class="header__nav-link">Чехол</a>
+          <a href="#" class="header__nav-link">База для зарядки и хранения</a>
+        </div>
+        <div class="header__nav-section">
+          <div class="header__nav-title">
+            Ваш аккаунт
+          </div>
+          <a href="#" class="header__nav-link">Ваши данные</a>
+          <a href="#" class="header__nav-link">Статус заказа</a>
+          <a href="#" class="header__nav-link">Обращения</a>
+        </div>
+        <div class="header__nav-section">
+          <div class="header__nav-title">
+            Информация по покупке
+          </div>
+          <a href="#" class="header__nav-link">Где купить</a>
+          <a href="#" class="header__nav-link">Гарантия</a>
+          <a href="#" class="header__nav-link">Доставка</a>
+          <a href="#" class="header__nav-link">Политика возврата</a>
+        </div>
+        <div class="header__nav-section">
+          <div class="header__nav-title">
+            Подробнее
+          </div>
+          <a href="#" class="header__nav-link">О команде</a>
+          <a href="#" class="header__nav-link">Поддержка</a>
+        </div>
+
+      </nav>
     </div>
   </div>
 </header>

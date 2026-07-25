@@ -66,7 +66,7 @@ export function initScrollSequence() {
         onUpdate: () => draw(state.frame),
         scrollTrigger: {
             trigger: ".sequence",
-            start: "top 30%",
+            start: "top 20%",
             end: "+=2000",
             scrub: 0.5,
             pin: true,

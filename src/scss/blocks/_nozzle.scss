@@ -1,10 +1,14 @@
 @use "../base/imports" as *;
 
 .nozzle {
-  padding: 132px 0;
+  padding: 140px 0;
 
   @include mq($l) {
-    padding: 60px 0;
+    padding: 80px 0;
+  }
+
+  @include mq($m) {
+    padding: 50px 0;
   }
 
   &__inner {
@@ -36,6 +40,10 @@
       line-height: 1.32;
     }
 
+    @include mq($m) {
+      font-size: 20px;
+    }
+
     .word {
       -webkit-background-clip: text;
       background-clip: text;
@@ -59,6 +67,10 @@
       font-size: 52px;
       line-height: 1.1;
       text-align: center;
+    }
+
+    @include mq($m) {
+      font-size: 32px;
     }
   }
 
@@ -114,6 +126,21 @@
       font-size: 20px;
       line-height: 1.4;
       text-align: center;
+    }
+
+    @include mq($m) {
+      font-size: 16px;
+      line-height: 1.25;
+      margin-top: 40px;
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @include mq($m) {
+      display: block;
+      margin-top: 24px;
     }
   }
 }
