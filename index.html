@@ -663,7 +663,8 @@
 						<div class="passport__title h2">
 							Технический паспорт
 						</div>
-						<a href="#" class="passport__link">Смотреть</a>
+						<button type="button" class="passport__link reset-btn"
+							data-popup-open="popup-passport">Смотреть</button>
 					</div>
 					<picture class="passport__img" data-animation="fade-up" data-delay="0.2" data-distance="60"
 						data-duration="0.2">
@@ -720,7 +721,56 @@
 			</div>
 		</section>
 	</main>
-
+	<div class="popup" data-popup="popup-passport">
+		<div class="popup__content">
+			<button class="popup__close reset-btn" data-popup-close>
+				<svg class="icon-svg icon-svg--24" aria-hidden="true">
+					<use xlink:href="./images/sprite.svg#close"></use>
+				</svg>
+			</button>
+			<div class="popup-passport">
+				<div class="popup-passport__item">
+					<div class="popup-passport__item-label">Аккумулятор</div>
+					<div class="popup-passport__item-desc">
+						Разъем: Type-C <br>
+						Номинальная емкость: 3000 мАч, 22.2 Вт/ч <br>
+						Время зарядки: до 120 минут <br>
+						Время работы: до 4,5 минут <br>
+						Номинальное напряжение: 7,4
+					</div>
+				</div>
+				<div class="popup-passport__item">
+					<div class="popup-passport__item-label">Поток воздуха</div>
+					<div class="popup-passport__item-desc">
+						Поток воздуха: 14 л/сек
+					</div>
+				</div>
+				<div class="popup-passport__item">
+					<div class="popup-passport__item-label">Сетевой адаптер</div>
+					<div class="popup-passport__item-desc">
+						Напряжение: 220-240 В <br>
+						Частота: 50 Гц <br>
+						Номинальное напряжение: 5 В <br>
+						Потребление: 3 А
+					</div>
+				</div>
+				<div class="popup-passport__item">
+					<div class="popup-passport__item-label">Мотор BLDC</div>
+					<div class="popup-passport__item-desc">
+						Мощность: 120 Вт <br>
+						Скорость вращения 100 000 ± 10% об/мин <br>
+						Рабочее напряжение: 7,4 В
+					</div>
+				</div>
+				<div class="popup-passport__item">
+					<div class="popup-passport__item-label">Подсветка</div>
+					<div class="popup-passport__item-desc">
+						Подсветка рабочей зоны: Режим Study Mode
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	{{> footer }}
 
 	<script type="module" src="/src/js/main.js"></script>

@@ -34,6 +34,12 @@
     @include mq($m) {
       width: 100%;
       padding: 16px 0;
+
+      &.is-active {
+        .footer__headline-arrow {
+          transform: rotate(180deg);
+        }
+      }
     }
   }
 
@@ -69,6 +75,13 @@
     }
   }
 
+  &__list {
+    @include mq($m) {
+      overflow: hidden;
+      transition: height 0.25s ease-in-out;
+    }
+  }
+
   &__links {
     display: flex;
     flex-direction: column;
@@ -76,9 +89,8 @@
     gap: 20px;
 
     @include mq($m) {
-      display: none;
-      gap: 16px;
       padding-top: 16px;
+      gap: 16px;
     }
   }
 

@@ -4,6 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { initPlugForm } from './modules/form-plug.js';
 import { initFixedHeader, initHeaderMenu } from './modules/header.js';
 import { initSliders } from './modules/sliders.js';
+import { initAccordion } from './modules/accordeon.js';
+import { initPopup } from './modules/popup.js';
 import { initFadeAnimations } from './modules/fade-animations.js';
 import { initTitleAnimations } from './modules/title-animations.js';
 import { initHero } from './modules/hero.js';
@@ -26,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initFadeAnimations();
     initHero();
     initAdvantagesTabs();
+    initAccordion();
+    initPopup();
     
     // порядок ниже важен: должен соответствовать порядку блоков в DOM,
     // особенно для pin-триггеров (history и scroll-sequence)
