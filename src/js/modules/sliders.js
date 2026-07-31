@@ -75,4 +75,28 @@ export function initSliders() {
             },
         });
     }
+
+    const teamSliders = document.querySelectorAll('.js-team-slider');
+
+    if (teamSliders.length > 0) {
+        teamSliders.forEach((item) => {
+            const swiper = new Swiper(item, {
+                slidesPerView: 'auto',
+                allowTouchMove: false,
+                spaceBetween: 0,
+
+                breakpoints: {
+                    768: {
+                        allowTouchMove: true,
+                        spaceBetween: 16,
+                    },
+                    1024: {
+                        allowTouchMove: true,
+                        spaceBetween: 24
+                    }
+                }
+            })
+        })
+
+    }
 }
